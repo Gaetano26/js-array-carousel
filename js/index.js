@@ -34,7 +34,7 @@ let slides = '';
 for (let i = 0; i < images.length; i++) {
       slides += `
        <div class="slide">
-           <img class="img-fluid" src="${images[i]}" alt="eroi">
+           <img class="img-fluid" src="./img/${images[i]}" alt="eroi-${i}">
        </div>
     `;
 }
