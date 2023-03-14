@@ -21,8 +21,21 @@
  }
 
 .next {
-     z-index: 1;
      position: absolute;
-     top: -100px;
+     top: 280px;
      right: 0;
+     background-color: transparent;
+    border: none;
+    color: white;
 }
+
+.prev {
+     position: absolute;
+    top: 280px;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+
+}
+

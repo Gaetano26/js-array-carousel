@@ -61,6 +61,7 @@ function goNext() {
     document.querySelectorAll('.slide')[currentIndex].classList.add('active')
 }
 
+
 //evento al click bottone prev
 prev.addEventListener('click', goPrev);
 
