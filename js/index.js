@@ -44,11 +44,11 @@ slider.innerHTML += slides;
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
 
 //creo costanti per prendere i 2 bottoni
-const next = document.querySelector('.next')
-const prev = document.querySelector('.prev')
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
 //evento al click bottone next
-next.addEventListener('click', goNext)
+next.addEventListener('click', goNext);
 
 //funzione per far scorrere le immagini al click del bottone next
 function goNext() {
@@ -62,7 +62,7 @@ function goNext() {
 }
 
 //evento al click bottone prev
-prev.addEventListener('click', goPrev)
+prev.addEventListener('click', goPrev);
 
 //funzione per far scorrere le immagini al click del bottone prev
 function goPrev() {
