@@ -31,6 +31,7 @@ let currentIndex = 0;
 // creo variabile slider vuota in cui inserire il contenuto con le immagini
 let slides = '';
 
+// creo un ciclo for in cui inserisco un elemento slide + (immagini array) all'interno della variabile slides
 for (let i = 0; i < images.length; i++) {
       slides += `
        <div class="slide">
@@ -50,7 +51,7 @@ const prev = document.querySelector('.prev');
 //evento al click bottone next
 next.addEventListener('click', goNext);
 
-//funzione per far scorrere le immagini al click del bottone next
+//funzione per far scorrere le immagini al click del bottone next + ciclo infinito
 function goNext() {
     document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
     if (currentIndex === images.length -1) {
@@ -65,7 +66,7 @@ function goNext() {
 //evento al click bottone prev
 prev.addEventListener('click', goPrev);
 
-//funzione per far scorrere le immagini al click del bottone prev
+//funzione per far scorrere le immagini al click del bottone prev + ciclo infinito
 function goPrev() {
     document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
     if (currentIndex === 0) {
