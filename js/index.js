@@ -34,7 +34,7 @@ let slides = '';
 for (let i = 0; i < images.length; i++) {
       slides += `
        <div class="slide">
-           <img class="img-fluid" src="./img/${images[i]}" alt="eroi-${i}">
+           <img src="./img/${images[i]}" alt="eroi-${i}">
        </div>
     `;
 }
@@ -42,3 +42,40 @@ for (let i = 0; i < images.length; i++) {
 //inserisco e rendo visibile la prima immagine
 slider.innerHTML += slides;
 document.querySelectorAll('.slide')[currentIndex].classList.add('active');
+
+//creo costanti per prendere i 2 bottoni
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
+
+//evento al click bottone next
+next.addEventListener('click', goNext)
+
+//funzione per far scorrere le immagini al click del bottone next
+function goNext() {
+    document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
+    if (currentIndex === images.length -1) {
+        currentIndex = 0;
+    }else {
+        currentIndex++;
+    }
+    document.querySelectorAll('.slide')[currentIndex].classList.add('active')
+}
+
+//evento al click bottone prev
+prev.addEventListener('click', goPrev)
+
+//funzione per far scorrere le immagini al click del bottone prev
+function goPrev() {
+    document.querySelectorAll('.slide')[currentIndex].classList.remove('active');
+    if (currentIndex === 0) {
+        currentIndex = images.length -1;
+    }else {
+        currentIndex--;
+    }
+    document.querySelectorAll('.slide')[currentIndex].classList.add('active')
+}
+
+
+
+
+
